@@ -32,13 +32,30 @@
 
 </head>
 
-<body>
+<body class="">
     <header class="max-w-screen-xl mx-auto mt-11">
         <!-- nav bar -->
         <div class="navbar bg-bg-color rounded-full mb-14">
-            <div class="navbar-start">
-                <div>
-                    <ul class="flex gap-8 pl-12 text-white font-semibold">
+            <div class="navbar-start order-last lg:order-first ml-[100px] lg:ml-0">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost text-white lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+
+                <div class="hidden lg:flex">
+                    <ul class="flex gap-8 pl-12 text-white font-semibold ">
                         <li><a>Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Shop</a></li>
@@ -46,14 +63,21 @@
                     </ul>
                 </div>
             </div>
-            <div class="navbar-center">
+            <div class="navbar-center order-first lg:order-none">
                 <img src="./images/logo.png" alt="" class="w-10">
                 <a class="btn btn-ghost normal-case text-2xl text-white">Fruit Burst</a>
             </div>
-            <div class="navbar-end relative pr-12">
+            <div class="navbar-end relative pr-12 hidden lg:flex">
                 <input type="text" placeholder="Type here" class="input input-bordered input-sm max-w-xs w-full" />
                 <i class="fa-solid fa-magnifying-glass absolute right-16"></i>
             </div>
+
+        </div>
+
+
+
+
+
         </div>
         <!-- banner -->
         <div class="relative">
@@ -123,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute left-[260px] top-[390px]">
+            <div class="absolute left-[260px] top-[390px] hidden md:hidden lg:block">
                 <div class="max-w-screen-md mx-auto flex gap-12 justify-center items-center p-10 bg-white rounded-lg">
                     <div class="text-center space-y-2">
                         <img src="./images/fruit1.png" alt="">
@@ -159,7 +183,7 @@
                     literature from 45 BC, making it over 2000 years old.</p>
             </div>
             <div class="flex-1 lg:flex lg:justify-end font-bold">
-                <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <div class="grid grid-flow-col gap-3 text-center auto-cols-max">
                     <div class="flex flex-col">
                         <span class="countdown font-mono text-5xl">
                             <span style="--value:15;"></span>
@@ -437,7 +461,7 @@
                 old.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="space-y-6">
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-10 flex-col lg:flex-row">
                         <div class="w-16 h-12 bg-slate-300 flex items-center justify-center rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                                 fill="none">
@@ -446,15 +470,15 @@
                                     fill="#121212" />
                             </svg>
                         </div>
-                        <div class="flex-1">
+                        <div class="flex-1 text-center lg:text-left">
                             <h2 class="text-2xl font-extrabold">Dedicated Team</h2>
-                            <hr class="border border-gray-400 w-20 my-3">
+                            <hr class="border border-gray-400 w-20 my-3 ml-[150px] lg:ml-0">
                             <p class="text-[#12121299]">Professional employees are there for you to pick the most
                                 amazing
                                 and fresh fruits.</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-10 flex-col lg:flex-row">
                         <div class="w-16 h-12 bg-slate-300 flex items-center justify-center rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                                 fill="none">
@@ -464,15 +488,15 @@
                             </svg>
 
                         </div>
-                        <div class="flex-1">
+                        <div class="flex-1 text-center lg:text-left">
                             <h2 class="text-2xl font-extrabold">Fresh is Best</h2>
-                            <hr class="border border-gray-400 w-20 my-3">
+                            <hr class="border border-gray-400 w-20 my-3 ml-[150px] lg:ml-0">
                             <p class="text-[#12121299]">Professional employees are there for you to pick the most
                                 amazing
                                 and fresh fruits.</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-10">
+                    <div class="flex items-center gap-10 flex-col lg:flex-row">
                         <div class="w-16 h-12 bg-slate-300 flex items-center justify-center rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                                 fill="none">
@@ -522,9 +546,9 @@
                             </svg>
 
                         </div>
-                        <div class="flex-1">
+                        <div class="flex-1 text-center lg:text-left">
                             <h2 class="text-2xl font-extrabold">Gift Certificates</h2>
-                            <hr class="border border-gray-400 w-20 my-3">
+                            <hr class="border border-gray-400 w-20 my-3 ml-[150px] lg:ml-0">
                             <p class="text-[#12121299]">Professional employees are there for you to pick the most
                                 amazing
                                 and fresh fruits.</p>
@@ -535,10 +559,10 @@
                     <img src="./images/whychoose1.png" alt="">
                 </div>
                 <div class="space-y-6">
-                    <div class="flex items-center gap-10">
-                        <div class="text-right flex-1">
+                    <div class="flex items-center gap-10 flex-col-reverse md:flex-row">
+                        <div class="text-center lg:text-right flex-1">
                             <h2 class="text-2xl font-extrabold">Integrated Supplier</h2>
-                            <hr class="border border-gray-400 w-20 my-3 ml-[210px]">
+                            <hr class="border border-gray-400 w-20 my-3 ml-[150px] lg:ml-[210px]">
                             <p class="text-[#12121299]">Professional employees are there for you to pick the most
                                 amazing and fresh fruits.</p>
                         </div>
@@ -586,10 +610,10 @@
                         </div>
 
                     </div>
-                    <div class="flex items-center gap-10">
-                        <div class="text-right flex-1">
+                    <div class="flex items-center gap-10 flex-col-reverse md:flex-row">
+                        <div class="text-center lg:text-right flex-1">
                             <h2 class="text-2xl font-extrabold">Sustainable Practice</h2>
-                            <hr class="border border-gray-400 w-20 my-3 ml-[210px]">
+                            <hr class="border border-gray-400 w-20 my-3 ml-[150px] lg:ml-[210px]">
                             <p class="text-[#12121299]">Professional employees are there for you to pick the most
                                 amazing and fresh fruits.</p>
                         </div>
@@ -606,10 +630,10 @@
                         </div>
 
                     </div>
-                    <div class="flex items-center gap-10">
-                        <div class="text-right flex-1">
+                    <div class="flex items-center gap-10 flex-col-reverse md:flex-row">
+                        <div class="text-center lg:text-right flex-1">
                             <h2 class="text-2xl font-extrabold">The Benefits Only</h2>
-                            <hr class="border border-gray-400 w-20 my-3 ml-[210px]">
+                            <hr class="border border-gray-400 w-20 my-3 ml-[150px] lg:ml-[210px]">
                             <p class="text-[#12121299]">Professional employees are there for you to pick the most
                                 amazing and fresh fruits.</p>
                         </div>
@@ -648,7 +672,7 @@
                 <img src="./images/logo.png" alt="" class="w-10">
                 <a class="btn btn-ghost normal-case text-2xl text-white">Fruit Burst</a>
             </div>
-            <div class="flex justify-center items-center gap-12 list-none">
+            <div class="grid grid-cols-2 lg:grid-cols-6 justify-center items-center gap-10 list-none mt-12">
                 <li>Home</li>
                 <li>About Us</li>
                 <li>Shop</li>
